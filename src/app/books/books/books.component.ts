@@ -6,8 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./books.component.scss']
 })
 export class BooksComponent implements OnInit {
-  myText = 'blafu';
+  book = {
+    url: '...',
+    title: '...'
+  };
+
+  color = '#FF00FF';
   constructor() {}
 
+  onClick(e: MouseEvent) {
+    console.log(e);
+  }
   ngOnInit() {}
 }
