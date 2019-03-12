@@ -1,9 +1,9 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'title-box',
   template: `
-    <h3>
+    <h3 (click)="sendPing()">
       {{ title }}
     </h3>
   `,
@@ -11,4 +11,9 @@ import { Component, Input } from '@angular/core';
 })
 export class TitleBoxComponent {
   @Input() title: string;
+  @Output() titleClicked = new EventEmitter<string>();
+
+  sendPing() {
+    this.titleClicked.emit(`ping ${new Date()}`);
+  }
 }

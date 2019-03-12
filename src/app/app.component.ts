@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   appTitle = 'Book Management';
+
+  onTitleClick(e: string) {
+    console.log(e);
+    this.appTitle = e;
+  }
 }
