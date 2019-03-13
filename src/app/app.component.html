@@ -1,10 +1,9 @@
 <title-box
-  [title]="appTitle | shout: '!=!!?!?'"
+  [title]="appTitle | shout: '!'"
   (titleClicked)="onTitleClick($event)"
 ></title-box>
 <!-- <title-box [title]="'Books Management'"></title-box>
 <title-box title="Books Management"></title-box> -->
 
 <navigation></navigation>
-<book-list></book-list>
 <router-outlet></router-outlet>
