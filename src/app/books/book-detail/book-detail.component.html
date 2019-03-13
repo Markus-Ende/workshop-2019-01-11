@@ -1,0 +1,7 @@
+<div *ngIf="book !== undefined; else elseTemplate">
+  {{ book.title }}
+</div>
+
+<ng-template #elseTemplate>
+  Loading....
+</ng-template>
