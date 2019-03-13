@@ -11,6 +11,7 @@ import { MouseCursorComponent } from './mouse-cursor/mouse-cursor.component';
 import { TitleBoxComponent } from './title-box/title-box.component';
 import { BookDataService } from './books/book-data.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ShoutPipe } from './shared/shout.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
     NavigationComponent,
     InfoBoxComponent,
     MouseCursorComponent,
-    TitleBoxComponent
+    TitleBoxComponent,
+    ShoutPipe
   ],
   imports: [
     BrowserModule,
