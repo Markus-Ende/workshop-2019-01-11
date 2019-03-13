@@ -10,6 +10,7 @@ import { InfoBoxComponent } from './info-box/info-box.component';
 import { MouseCursorComponent } from './mouse-cursor/mouse-cursor.component';
 import { TitleBoxComponent } from './title-box/title-box.component';
 import { BookDataService } from './books/book-data.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,13 @@ import { BookDataService } from './books/book-data.service';
     MouseCursorComponent,
     TitleBoxComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, BooksModule, AboutModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BooksModule,
+    AboutModule,
+    HttpClientModule
+  ],
   providers: [BookDataService],
   bootstrap: [AppComponent]
 })
