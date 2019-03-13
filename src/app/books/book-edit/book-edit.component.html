@@ -1,12 +1,36 @@
-<form #form="ngForm">
+<form #form="ngForm" (ngSubmit)="onSubmit(form.value)">
+  <label for="title-input">Title:</label>
   <input
+    id="title-input"
     required
-    minlength="4"
     type="text"
     [(ngModel)]="book.title"
     name="title"
     #title="ngModel"
+  /><br />
+  <div [hidden]="!title.errors?.required || title.pristine" style="color: red">
+    Title required!
+  </div>
+  <label for="abstract-input">Abstract:</label>
+  <input
+    id="abstract-input"
+    minlength="4"
+    type="text"
+    [(ngModel)]="book.abstract"
+    name="abstract"
+    #abstract="ngModel"
+  /><br />
+  <label for="title-input">Author:</label>
+  <input
+    id="author-input"
+    minlength="4"
+    type="text"
+    [(ngModel)]="book.author"
+    name="author"
+    #author="ngModel"
   />
+
+  <button [disabled]="!form.valid" type="submit">Save</button>
 </form>
 
 <pre>

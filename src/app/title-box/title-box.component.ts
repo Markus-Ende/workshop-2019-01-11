@@ -1,4 +1,10 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  ViewEncapsulation
+} from '@angular/core';
 
 @Component({
   selector: 'title-box',
@@ -7,7 +13,8 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
       {{ title }}
     </h3>
   `,
-  styleUrls: ['./title-box.component.scss']
+  styleUrls: ['./title-box.component.scss'],
+  encapsulation: ViewEncapsulation.Emulated
 })
 export class TitleBoxComponent {
   @Input() title: string;
