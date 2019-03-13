@@ -1,0 +1,23 @@
+<form #form="ngForm">
+  <input
+    required
+    minlength="4"
+    type="text"
+    [(ngModel)]="book.title"
+    name="title"
+    #title="ngModel"
+  />
+</form>
+
+<pre>
+  #form.value:
+  {{ form.value | json }}
+
+  #title.value:
+  {{ title.value | json }}
+
+  #title.errors:
+  {{ title.errors | json }}
+
+  </pre
+>

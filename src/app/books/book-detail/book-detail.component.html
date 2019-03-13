@@ -1,5 +1,7 @@
 <div *ngIf="book !== undefined; else elseTemplate">
   {{ book.title }}
+
+  <a [routerLink]="['edit']">Edit</a>
 </div>
 
 <ng-template #elseTemplate>
